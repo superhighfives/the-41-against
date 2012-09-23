@@ -1,0 +1,60 @@
+!!!  
+%html  
+  %head  
+    %title The 41 Against
+    %meta{:name => "description", :content => ""}
+    %meta{:name => "author", :content => "Charlie Gleason"}
+    %meta{:name => "viewport", :content => "width=device-width,initial-scale=1,maximum-scale=1.0"}
+    %link{:href => "/images/favicon.ico", :rel => "shortcut icon"}
+    %link{:href => "/images/apple-touch-icon.png", :rel => "apple-touch-icon"}
+
+    %meta{:content => "The 41 Against", :property => "og:title"}
+    %meta{:content => "website", :property => "og:type"}
+    %meta{:content => "", :property => "og:description"}
+    %meta{:content => "http://the41against.com/", :property => "og:url"}
+    %meta{:content => "http://the41against.com/images/apple-touch-icon.png", :property => "og:image"}
+    %meta{:content => "The 41 Against", :property => "og:site_name"}
+    %meta{:content => "500678127", :property => "fb:admins"}
+
+    %link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/stylesheets/the41against.css", :rel => "stylesheet", :type => "text/css"}
+
+    %script{:src => "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"}
+  %body  
+    .header
+      .wrapper
+        %h1
+          The
+          %span.circle 41
+          Against
+        .thin.centered
+          :markdown
+            On Thursday September 20th, 2012, **41 Australian senators** in the upper house voted against marriage equality. This list serves as a reminder of those who stand for prejudice and inequality. Let your voice be heard. Explain why marriage equality is so important. Tell them Australia does not support **the 41 against**.
+          %p
+            %a{href: "http://the98against.com/"} Looking for the 98 parlimentary members who voted against equality in the lower house? Visit The 98 Against.
+      %hr
+    
+    .content
+      .wrapper
+        =yield
+
+    .footer
+      %hr
+      .wrapper
+        .thin.centered
+          :markdown
+            Made by [Charlie Gleason](http://charliegleason.com/ "Charlie Gleason"), who is feeling pretty frustrated • Typeset in [Source Sans Pro](http://blogs.adobe.com/typblography/2012/08/source-sans-pro.html "Adobe's open source Source Sans Pro") and Helvetica
+
+    %script{:src => "http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"}
+    %script{:src => "//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"}
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21848111-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
