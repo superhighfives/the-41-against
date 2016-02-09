@@ -27,7 +27,7 @@ configure :production do
 end
 
 configure do
-  Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.rb'))
+  Compass.add_project_configuration(File.join('config', 'compass.rb'))
 end
 
 get '/' do
